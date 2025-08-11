@@ -1,4 +1,7 @@
+'use client'
+
 import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import { useState, useEffect } from 'react'
 
 const stats = [
   { number: '250+', label: 'Projects Completed' },
@@ -7,11 +10,81 @@ const stats = [
   { number: '50+', label: 'Expert Team' }
 ]
 
+const backgroundImages = [
+  {
+    url: '/images/services/11062b_4ac00df9268b4765b18eb82eee22432f~mv2.avif',
+    alt: 'Professional construction and engineering services'
+  },
+  {
+    url: '/images/services/3b23e7970432450492e5d304d7a29374.avif',
+    alt: 'Infrastructure development and civil engineering'
+  },
+  {
+    url: '/images/services/3c6e7f_7e5c67d612524dcab8408712d523f1bd~mv2.avif',
+    alt: 'Road construction and maintenance projects'
+  },
+  {
+    url: '/images/services/71dfa86bbe7d43838d96f0fbb643abdf.avif',
+    alt: 'Modern construction site with advanced equipment'
+  },
+  {
+    url: '/images/services/89238f5335504d239408fb381de8c4cb.avif',
+    alt: 'Quality construction and project management'
+  }
+]
+
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 5000) // Change image every 5 seconds
+
+    return () => clearInterval(timer)
+  }, [])
   return (
-    <section id="home" className="relative bg-gradient-to-br from-secondary via-secondary-800 to-secondary overflow-hidden">
+    <section id="home" className="relative bg-gradient-to-br from-secondary via-secondary-800 to-secondary overflow-hidden min-h-screen">
+      {/* Background Image Slideshow */}
+      <div className="absolute inset-0 z-0">
+        {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              backgroundImage: `url(${image.url})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        ))}
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/70 to-secondary/80" />
+      </div>
+
+      {/* Slideshow Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentImageIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImageIndex 
+                ? 'bg-primary shadow-lg scale-110' 
+                : 'bg-white/50 hover:bg-white/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
       {/* Main Hero Content */}
-      <div className="relative z-10 pt-20">
+      <div className="relative z-10 pt-20 flex items-center min-h-screen">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl py-20 sm:py-28 lg:py-36">
             <div className="text-center">
@@ -19,7 +92,7 @@ export default function Hero() {
                 Building Ghana&apos;s
                 <span className="block text-primary bg-gradient-to-r from-primary to-primary-400 bg-clip-text text-transparent">Future</span>
               </h1>
-              <p className="text-xl sm:text-2xl leading-relaxed text-accent-200 max-w-3xl mx-auto mb-12">
+              <p className="text-xl sm:text-2xl leading-relaxed text-accent-200 max-w-3xl mx-auto mb-12 font-bold text-white">
                 World-class construction and engineering solutions with cutting-edge AI technology.
               </p>
               <div className="flex items-center justify-center gap-x-8">
