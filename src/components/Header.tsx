@@ -12,14 +12,14 @@ const navigation = [
     name: 'Services', 
     href: '#services',
     subItems: [
-      { name: 'Civil Engineering', href: '#civil-engineering' },
-      { name: 'Roads', href: '#roads' },
-      { name: 'Real Estate', href: '#real-estate' },
-      { name: 'Sea Defence', href: '#sea-defence' },
-      { name: 'Water Treatment', href: '#water-treatment' },
-      { name: 'Consultancy & Project Management', href: '#consultancy' },
-      { name: 'Energy', href: '#energy' },
-      { name: '3D Interior Design', href: '#interior-design' },
+      { name: 'Civil Engineering', href: '/services/civil-engineering' },
+      { name: 'Roads', href: '/services/roads' },
+      { name: 'Real Estate', href: '/services/real-estate' },
+      { name: 'Sea Defence', href: '/services/sea-defence' },
+      { name: 'Water Treatment', href: '/services/water-treatment' },
+      { name: 'Consultancy & Project Management', href: '/services/consultancy' },
+      { name: 'Energy', href: '/services/energy' },
+      { name: '3D Interior Design', href: '/services/interior-design' },
     ]
   },
   { name: 'Partners', href: '#partners' },
@@ -35,7 +35,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="#home" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-blue-600">NPUNTU</span>
+            <span className="text-2xl font-bold text-orange-600">NPUNTU</span>
             <span className="text-sm text-gray-600 block">COMPANIES LTD</span>
           </a>
         </div>
@@ -57,7 +57,7 @@ export default function Header() {
               {item.subItems ? (
                 <div className="relative">
                   <button
-                    className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
+                    className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600"
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     {item.name}
@@ -68,9 +68,9 @@ export default function Header() {
                       <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
                         <div className="p-4">
                           {item.subItems.map((subItem) => (
-                            <div key={subItem.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                            <div key={subItem.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-orange-50">
                               <div>
-                                <a href={subItem.href} className="font-semibold text-gray-900">
+                                <a href={subItem.href} className="font-semibold text-gray-900 hover:text-orange-600">
                                   {subItem.name}
                                   <span className="absolute inset-0" />
                                 </a>
@@ -83,7 +83,7 @@ export default function Header() {
                   )}
                 </div>
               ) : (
-                <a href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600">
+                <a href={item.href} className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600">
                   {item.name}
                 </a>
               )}
@@ -94,7 +94,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#contact"
-            className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
           >
             Get in Touch
           </a>
@@ -106,7 +106,7 @@ export default function Header() {
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#home" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-bold text-blue-600">NPUNTU</span>
+              <span className="text-2xl font-bold text-orange-600">NPUNTU</span>
               <span className="text-sm text-gray-600 block">COMPANIES LTD</span>
             </a>
             <button

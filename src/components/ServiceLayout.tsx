@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Header from './Header'
 import { ArrowLeftIcon } from '@heroicons/react/20/solid'
-import { CheckCircleIcon, ChartBarIcon } from '@heroicons/react/24/outline'
+import { CheckCircleIcon } from '@heroicons/react/24/outline'
 
 interface ServiceFeature {
   title: string

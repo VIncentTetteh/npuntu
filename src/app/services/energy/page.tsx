@@ -3,7 +3,7 @@ import {
   BoltIcon,
   SunIcon,
   CogIcon,
-  BatteryChargerIcon,
+  Battery100Icon,
   WrenchScrewdriverIcon,
   ChartBarIcon 
 } from '@heroicons/react/24/outline'
@@ -23,7 +23,7 @@ export default function EnergyPage() {
     {
       title: 'Energy Storage',
       description: 'Battery storage solutions and energy management systems for reliable power supply.',
-      icon: <BatteryChargerIcon className="h-6 w-6 text-white" />
+      icon: <Battery100Icon className="h-6 w-6 text-white" />
     },
     {
       title: 'System Integration',
