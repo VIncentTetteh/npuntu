@@ -111,7 +111,7 @@ export default function CivilEngineeringPage() {
       title="Civil Engineering"
       subtitle="Building Ghana&apos;s Future with Engineering Excellence"
       description="Our civil engineering services encompass the full spectrum of infrastructure development, from residential buildings to large-scale commercial and industrial projects. We combine local expertise with international best practices to deliver sustainable, innovative solutions."
-      heroImage="/images/services/11062b_4ac00df9268b4765b18eb82eee22432f~mv2.avif"
+      heroImage="/images/services/Constructioncivilengineertechnicianandarchitectworking.webp"
       features={features}
       stats={stats}
       processSteps={processSteps}

@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import { ArrowRightIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useState, useEffect } from 'react'
 
 const stats = [
@@ -65,6 +65,28 @@ export default function Hero() {
         ))}
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/70 to-secondary/80" />
+      </div>
+
+      {/* Animated Scroll Down Arrow */}
+      <div className="absolute bottom-80 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+        <button
+          onClick={() => {
+            const nextSection = document.getElementById('about') || document.querySelector('section:not(#home)');
+            if (nextSection) {
+              nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110"
+          aria-label="Scroll down to see more content"
+        >
+          <div className="text-white/80 text-sm font-medium group-hover:text-white transition-colors duration-300">
+            Scroll Down
+          </div>
+          <div className="relative">
+            <ChevronDownIcon className="h-8 w-8 text-white/80 group-hover:text-white transition-all duration-300 animate-bounce" />
+            <ChevronDownIcon className="h-8 w-8 text-white/40 absolute top-2 left-0 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.1s' }} />
+          </div>
+        </button>
       </div>
 
       {/* Slideshow Indicators */}

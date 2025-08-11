@@ -102,7 +102,7 @@ export default function EnergyPage() {
       title="Energy Solutions"
       subtitle="Powering Ghana&apos;s Future with Renewable Energy"
       description="Our energy solutions focus on renewable energy systems that provide sustainable, cost-effective power for residential, commercial, and industrial applications. We design and implement solar, wind, and hybrid energy systems that reduce environmental impact while delivering reliable electricity."
-      heroImage="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8Y2lyY2xlIGN4PSIzMDAiIGN5PSIxNTAiIHI9IjYwIiBmaWxsPSIjRkJCRjI0IiBmaWxsLW9wYWNpdHk9IjAuOCIvPgo8cGF0aCBkPSJNMzAwIDkwTDMzMCAxNTBMMjcwIDE1MEwzMDAgOTBaIiBmaWxsPSIjRkJCRjI0IiBmaWxsLW9wYWNpdHk9IjAuNiIvPgo8cGF0aCBkPSJNNDAwIDIwMEw1MDAyMDBMNTUwIDMwMEw0NTAgMzAwTDQwMCAyMDBaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjQiLz4KPHJlY3QgeD0iNzAwIiB5PSIzMDAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjMiLz4KPHR4dCB4PSI2MDAiIHk9IjUwMCIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkVuZXJneSBTb2x1dGlvbnM8L3RleHQ+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfMF8xIiB4MT0iMCIgeTE9IjAiIHgyPSIxMjAwIiB5Mj0iNjAwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGNTlFMEIiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRDE3MjEyIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg=="
+      heroImage="/images/services/green-energy-solutions.jpeg"
       features={features}
       stats={stats}
       processSteps={processSteps}
