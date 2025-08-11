@@ -63,50 +63,51 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 sm:py-32 bg-gray-50">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-600">OUR SERVICES</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Comprehensive Construction & Engineering Solutions
+    <section id="services" className="py-20 sm:py-24 bg-accent-50">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-base font-semibold leading-7 text-primary mb-4">OUR SERVICES</h2>
+          <p className="text-4xl font-bold tracking-tight text-secondary mb-6">
+            Construction & Engineering Solutions
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            From civil engineering to cutting-edge 3D interior design, we provide end-to-end solutions 
-            that meet the diverse needs of our clients across Ghana and beyond.
+          <p className="text-xl leading-relaxed text-accent-600 max-w-3xl mx-auto">
+            End-to-end solutions that meet the diverse needs of our clients across Ghana and beyond.
           </p>
         </div>
         
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-12">
-            {services.map((service) => (
-              <div key={service.name} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
-                <div className="flex items-center gap-x-4">
-                  <div className="flex-none">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                      <service.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                    </div>
-                  </div>
-                  <div className="flex-auto">
-                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
-                      {service.name}
-                    </h3>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.slice(0, 6).map((service) => (
+            <div key={service.name} className="bg-background p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer">
+              <div className="flex items-center gap-x-4 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary group-hover:bg-primary-600 group-hover:scale-110 transition-all duration-300 shadow-lg">
+                  <service.icon className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
                 </div>
-                <p className="mt-6 text-base leading-7 text-gray-600">
-                  {service.description}
-                </p>
-                <div className="mt-6">
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600 hover:text-blue-500"
-                  >
-                    Learn more
-                    <span aria-hidden="true">→</span>
-                  </Link>
-                </div>
+                <h3 className="text-lg font-semibold text-secondary group-hover:text-primary transition-colors duration-300">
+                  {service.name}
+                </h3>
               </div>
-            ))}
-          </div>
+              <p className="text-accent-600 leading-relaxed mb-4">
+                {service.description}
+              </p>
+              <Link
+                href={service.href}
+                className="inline-flex items-center gap-x-2 text-sm font-semibold text-primary hover:text-primary-600 transition-colors duration-300 group-hover:translate-x-1"
+              >
+                Learn more
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link
+            href="/#services"
+            className="inline-flex items-center gap-x-2 text-lg font-semibold text-primary hover:text-primary-600 transition-colors duration-300"
+          >
+            View All Services
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </section>

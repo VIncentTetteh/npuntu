@@ -77,12 +77,21 @@ export default function CivilEngineeringPage() {
   const infographicData = {
     title: 'Project Distribution by Sector',
     data: [
-      { label: 'Residential', value: 35, color: '#3B82F6' },
+      { label: 'Residential', value: 35, color: '#EA580C' },
       { label: 'Commercial', value: 25, color: '#10B981' },
       { label: 'Infrastructure', value: 30, color: '#F59E0B' },
       { label: 'Industrial', value: 10, color: '#EF4444' }
     ]
   }
+
+  const gallery = [
+    '/images/services/11062b_4ac00df9268b4765b18eb82eee22432f~mv2.avif',
+    '/images/services/3c6e7f_7e5c67d612524dcab8408712d523f1bd~mv2.avif',
+    '/images/services/71dfa86bbe7d43838d96f0fbb643abdf.avif',
+    '/images/services/89238f5335504d239408fb381de8c4cb.avif',
+    '/images/services/cccf0d1c2f4845a9a78a2b16e75459c7.avif',
+    '/images/services/da06b8e50d69441f82862d8c00ae77b4.avif'
+  ]
 
   const benefits = [
     'Innovative engineering solutions tailored to local conditions',
@@ -102,11 +111,12 @@ export default function CivilEngineeringPage() {
       title="Civil Engineering"
       subtitle="Building Ghana&apos;s Future with Engineering Excellence"
       description="Our civil engineering services encompass the full spectrum of infrastructure development, from residential buildings to large-scale commercial and industrial projects. We combine local expertise with international best practices to deliver sustainable, innovative solutions."
-      heroImage="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMF8xKSIvPgo8cGF0aCBkPSJNMjAwIDMwMEw0MDAgMTUwTDYwMCAzMDBMODAwIDE1MEwxMDAwIDMwMFY1MDBIMjAwVjMwMFoiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMiIvPgo8cGF0aCBkPSJNNDAwIDIwMEw2MDAgMTAwTDgwMCAyMDBWNDAwSDQwMFYyMDBaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjMiLz4KPHR4dCB4PSI2MDAiIHk9IjM1MCIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNpdmlsIEVuZ2luZWVyaW5nPC90ZXh0Pgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzBfMSIgeDE9IjAiIHkxPSIwIiB4Mj0iMTIwMCIgeTI9IjYwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMzMzM0ZGIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzFFNDBBRiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo="
+      heroImage="/images/services/11062b_4ac00df9268b4765b18eb82eee22432f~mv2.avif"
       features={features}
       stats={stats}
       processSteps={processSteps}
       infographicData={infographicData}
+      gallery={gallery}
       benefits={benefits}
     />
   )

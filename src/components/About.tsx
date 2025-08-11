@@ -21,45 +21,39 @@ const features = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32 bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-600">WHO WE ARE</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Leading Construction & Engineering Excellence in Ghana
+    <section id="about" className="py-20 sm:py-24 bg-background">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-base font-semibold leading-7 text-primary mb-4">WHO WE ARE</h2>
+          <p className="text-4xl font-bold tracking-tight text-secondary mb-6">
+            Leading Construction Excellence in Ghana
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Npuntu Companies Ltd stands at the forefront of Ghana&apos;s construction and engineering sector,
-            delivering world-class infrastructure solutions that transform communities and drive economic growth.
+          <p className="text-xl leading-relaxed text-accent-600">
+            World-class infrastructure solutions that transform communities and drive economic growth.
           </p>
         </div>
         
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="space-y-8">
             {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                  <CheckCircleIcon className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
-                  {feature.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p className="flex-auto">{feature.description}</p>
-                </dd>
+              <div key={feature.name} className="flex items-start gap-4 group">
+                <CheckCircleIcon className="h-6 w-6 flex-none text-primary mt-1" aria-hidden="true" />
+                <div>
+                  <h3 className="text-lg font-semibold text-secondary group-hover:text-primary transition-colors duration-300 mb-2">
+                    {feature.name}
+                  </h3>
+                  <p className="text-accent-600 leading-relaxed">{feature.description}</p>
+                </div>
               </div>
             ))}
-          </dl>
-        </div>
-
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24">
-          <div className="rounded-2xl bg-gray-50 p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered Innovation</h3>
-            <p className="text-gray-600 mb-4">
-              Through our partnership with Waltergates AI technology, Npuntu is empowered with real-time 3D visualization 
-              and immersive design tools, allowing our clients to see and modify projects before ground is broken.
-            </p>
-            <p className="text-gray-600">
-              The AI-driven analytics enhance accuracy in planning, material estimation, and resource allocation, 
-              significantly reducing project delays and cost overruns while ensuring sustainable, culturally relevant designs.
+          </div>
+          
+          <div className="rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 p-8 shadow-lg">
+            <h3 className="text-2xl font-semibold text-secondary mb-6">AI-Powered Innovation</h3>
+            <p className="text-accent-700 leading-relaxed">
+              Through our partnership with Waltergates AI technology, we deliver real-time 3D visualization 
+              and AI-driven analytics that enhance accuracy in planning, reduce project delays, and ensure 
+              sustainable, culturally relevant designs.
             </p>
           </div>
         </div>

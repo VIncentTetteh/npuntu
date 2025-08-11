@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="bg-secondary" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <div>
-              <span className="text-2xl font-bold text-blue-400">NPUNTU</span>
-              <span className="text-sm text-gray-400 block">COMPANIES LTD</span>
+              <span className="text-2xl font-bold text-primary">NPUNTU</span>
+              <span className="text-sm text-gray-400 block font-medium">COMPANIES LTD</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Leading Ghanaian-owned Construction & Engineering company delivering innovative, 
@@ -23,22 +23,22 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#civil-engineering" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#civil-engineering" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Civil Engineering
                     </a>
                   </li>
                   <li>
-                    <a href="#roads" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#roads" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Roads
                     </a>
                   </li>
                   <li>
-                    <a href="#real-estate" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#real-estate" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Real Estate
                     </a>
                   </li>
                   <li>
-                    <a href="#water-treatment" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#water-treatment" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Water Treatment
                     </a>
                   </li>
@@ -48,22 +48,22 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">More Services</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#sea-defence" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#sea-defence" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Sea Defence
                     </a>
                   </li>
                   <li>
-                    <a href="#consultancy" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#consultancy" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Consultancy
                     </a>
                   </li>
                   <li>
-                    <a href="#energy" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#energy" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Energy
                     </a>
                   </li>
                   <li>
-                    <a href="#interior-design" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#interior-design" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       3D Interior Design
                     </a>
                   </li>
@@ -75,17 +75,17 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#about" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#about" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       About
                     </a>
                   </li>
                   <li>
-                    <a href="#partners" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#partners" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Partners
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className="text-sm leading-6 text-gray-300 hover:text-white">
+                    <a href="#contact" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Contact
                     </a>
                   </li>
@@ -112,7 +112,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+        <div className="mt-16 border-t border-accent-700/30 pt-8 sm:mt-20 lg:mt-24">
           <div className="flex items-center justify-between">
             <p className="text-xs leading-5 text-gray-400">
               &copy; 2024 Npuntu Companies Ltd. All rights reserved.
