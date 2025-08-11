@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-secondary" aria-labelledby="footer-heading">
@@ -23,24 +25,24 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#civil-engineering" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/civil-engineering" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Civil Engineering
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#roads" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/roads" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Roads
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#real-estate" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/real-estate" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Real Estate
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#water-treatment" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/water-treatment" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Water Treatment
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -48,24 +50,24 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-white">More Services</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li>
-                    <a href="#sea-defence" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/sea-defence" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Sea Defence
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#consultancy" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/consultancy" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Consultancy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#energy" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/energy" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       Energy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#interior-design" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
+                    <Link href="/services/interior-design" className="text-sm leading-6 text-gray-300 hover:text-primary transition-colors">
                       3D Interior Design
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
