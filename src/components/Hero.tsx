@@ -121,7 +121,7 @@ export default function Hero() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl sm:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-primary-100 text-sm sm:text-base font-medium">{stat.label}</div>
+                <div className="text-primary-100 text-sm sm:text-base font-bold text-white">{stat.label}</div>
               </div>
             ))}
           </div>
