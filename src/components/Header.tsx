@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -32,11 +33,17 @@ export default function Header() {
 
   return (
     <header className="bg-background/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#home" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-primary">NPUNTU</span>
-            <span className="text-sm text-accent-600 block font-medium">COMPANIES LTD</span>
+          <a href="#home" className="-m-1.5 p-1.5 flex items-center">
+            <Image
+              src="/logomain2.png"
+              alt="Npuntu Companies Ltd Logo"
+              width={240}
+              height={80}
+              className="h-16 w-auto"
+              priority
+            />
           </a>
         </div>
         
@@ -105,9 +112,14 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm shadow-2xl">
           <div className="flex items-center justify-between">
-            <a href="#home" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-bold text-primary">NPUNTU</span>
-              <span className="text-sm text-accent-600 block font-medium">COMPANIES LTD</span>
+            <a href="#home" className="-m-1.5 p-1.5 flex items-center">
+              <Image
+                src="/logomain-nobg.png"
+                alt="Npuntu Companies Ltd Logo"
+                width={180}
+                height={65}
+                className="h-12 w-auto"
+              />
             </a>
             <button
               type="button"
