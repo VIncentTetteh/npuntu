@@ -1,61 +1,10 @@
 import { ArrowRightIcon } from '@heroicons/react/20/solid'
-import { 
-  BuildingOfficeIcon,
-  WrenchScrewdriverIcon,
-  ShieldCheckIcon,
-  CheckBadgeIcon 
-} from '@heroicons/react/24/outline'
-import Carousel from './Carousel'
-
-const heroImages = [
-  {
-    src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIHZpZXdCb3g9IjAgMCAxNDAwIDcwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjE0MDAiIHkyPSI3MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzI0MjQyNCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNzE3MTciLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjYmcpIi8+Cjx8phdGggZD0iTTEwMCAzMDBMMzAwIDEwMEw2MDAgMzAwTDkwMCAxMDBMMTIwMCAzMDBWNTUwSDEwMFYzMDBaIiBmaWxsPSJyZ2IoMjQ3LCAxMTUsIDIyKSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KPHBhdGggZD0iTTMwMCAyMDBMNjAwIDUwTDkwMCAyMDBWNTAwSDMwMFYyMDBaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPHRleHQgeD0iNzAwIiB5PSI2MDAiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iUG9wcGlucyIgZm9udC1zaXplPSI1NiIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNvbnN0cnVjdGlvbjwvdGV4dD4KPHRleHQgeD0iNzAwIiB5PSI2NTAiIGZpbGw9InJnYigyNDcsIDExNSwgMjIpIiBmb250LWZhbWlseT0iUG9wcGlucyIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RXhjZWxsZW5jZTwvdGV4dD4KPC9zdmc+',
-    alt: 'Construction Excellence',
-    title: 'Building Excellence',
-    description: 'World-class construction and engineering solutions'
-  },
-  {
-    src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIHZpZXdCb3g9IjAgMCAxNDAwIDcwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjE0MDAiIHkyPSI3MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzI0MjQyNCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNzE3MTciLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjYmcpIi8+CjxjaXJjbGUgY3g9IjM1MCIgY3k9IjIwMCIgcj0iMTAwIiBmaWxsPSJyZ2IoMjQ3LCAxMTUsIDIyKSIgZmlsbC1vcGFjaXR5PSIwLjMiLz4KPGNpcmNsZSBjeD0iMTA1MCIgY3k9IjQwMCIgcj0iMTIwIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPHJlY3QgeD0iNjAwIiB5PSIzMDAiIHdpZHRoPSIyNDAiIGhlaWdodD0iMTIwIiBmaWxsPSJyZ2IoMjQ3LCAxMTUsIDIyKSIgZmlsbC1vcGFjaXR5PSIwLjQiLz4KPHR4dCB4PSI3MDAiIHk9IjYwMCIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJQb3BwaW5zIiBmb250LXNpemU9IjU2IiBmb250LXdlaWdodD0iYm9sZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SW5mcmFzdHJ1Y3R1cmU8L3RleHQ+CjwvZz4KPHRleHQgeD0iNzAwIiB5PSI2NTAiIGZpbGw9InJnYigyNDcsIDExNSwgMjIpIiBmb250LWZhbWlseT0iUG9wcGlucyIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RGV2ZWxvcG1lbnQ8L3RleHQ+Cjwvc3ZnPg==',
-    alt: 'Infrastructure Development',
-    title: 'Modern Infrastructure',
-    description: 'Building Ghana&apos;s future with cutting-edge infrastructure'
-  },
-  {
-    src: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIHZpZXdCb3g9IjAgMCAxNDAwIDcwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjE0MDAiIHkyPSI3MDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzI0MjQyNCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNzE3MTciLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InVybCgjYmcpIi8+CjxjaXJjbGUgY3g9IjUwMCIgY3k9IjE1MCIgcj0iODAiIGZpbGw9IiNGRkQzMDAiIGZpbGwtb3BhY2l0eT0iMC44Ii8+CjxwYXRoIGQ9Ik01MDAgNzBMNTQwIDEzMEw0NjAgMTMwTDUwMCA3MFoiIGZpbGw9IiNGRkQzMDAiIGZpbGwtb3BhY2l0eT0iMC42Ii8+CjxyZWN0IHg9IjcwMCIgeT0iMzUwIiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjEyMCIgZmlsbD0icmdiKDI0NywgMTE1LCAyMikiIGZpbGwtb3BhY2l0eT0iMC4zIi8+Cjx0ZXh0IHg9IjcwMCIgeT0iNjAwIiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IlBvcHBpbnMiIGZvbnQtc2l6ZT0iNTYiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FbmVyZ3k8L3RleHQ+Cjx0ZXh0IHg9IjcwMCIgeT0iNjUwIiBmaWxsPSJyZ2IoMjQ3LCAxMTUsIDIyKSIgZm9udC1mYW1pbHk9IlBvcHBpbnMiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlNvbHV0aW9uczwvdGV4dD4KPC9zdmc+',
-    alt: 'Sustainable Energy',
-    title: 'Energy Solutions',
-    description: 'Sustainable and renewable energy systems'
-  }
-]
 
 const stats = [
   { number: '250+', label: 'Projects Completed' },
   { number: '15+', label: 'Years Experience' },
   { number: '98%', label: 'Client Satisfaction' },
   { number: '50+', label: 'Expert Team' }
-]
-
-const capabilities = [
-  {
-    icon: BuildingOfficeIcon,
-    title: 'Infrastructure',
-    description: 'Large-scale infrastructure and civil engineering projects'
-  },
-  {
-    icon: WrenchScrewdriverIcon,
-    title: 'Engineering',
-    description: 'Advanced engineering solutions with AI-powered design'
-  },
-  {
-    icon: ShieldCheckIcon,
-    title: 'Quality Assurance',
-    description: 'International standards with local expertise'
-  },
-  {
-    icon: CheckBadgeIcon,
-    title: 'Certified',
-    description: 'Registered and certified construction company in Ghana'
-  }
 ]
 
 export default function Hero() {
@@ -67,7 +16,7 @@ export default function Hero() {
           <div className="mx-auto max-w-4xl py-20 sm:py-28 lg:py-36">
             <div className="text-center">
               <h1 className="text-5xl font-bold tracking-tight text-background sm:text-6xl lg:text-7xl mb-8">
-                Building Ghana's
+                Building Ghana&apos;s
                 <span className="block text-primary bg-gradient-to-r from-primary to-primary-400 bg-clip-text text-transparent">Future</span>
               </h1>
               <p className="text-xl sm:text-2xl leading-relaxed text-accent-200 max-w-3xl mx-auto mb-12">
