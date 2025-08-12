@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class', // Enable class-based dark mode
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,6 +14,9 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        card: 'var(--card-background)',
+        border: 'var(--border-color)',
+        muted: 'var(--muted-text)',
         primary: {
           DEFAULT: 'rgb(var(--color_41))', // Brand Orange #EC9C24
           50: 'rgba(236, 156, 36, 0.05)',

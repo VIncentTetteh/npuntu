@@ -1,11 +1,20 @@
 @import "tailwindcss";
 
 :root {
+  /* Light mode colors */
   --background: #F8F9FA; /* Off-White */
   --foreground: #1E1E1E; /* Dark Charcoal */
   --color_41: 236, 156, 36; /* Brand Orange #EC9C24 */
   --accent: #6B7280; /* Cool Steel Gray */
   --secondary: #1E1E1E; /* Dark Charcoal */
+  --card-background: #FFFFFF;
+  --border-color: #E5E7EB;
+  --muted-text: #6B7280;
+  --scrollbar-track: #f3f4f6;
+  --scrollbar-thumb: #6B7280;
+  --scrollbar-thumb-hover: rgb(236, 156, 36);
+  --dropdown-bg: #FFFFFF;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 @theme inline {
@@ -15,12 +24,42 @@
   --color-primary: rgb(var(--color_41));
   --color-accent: var(--accent);
   --color-secondary: var(--secondary);
+  --color-card-background: var(--card-background);
+  --color-border: var(--border-color);
+  --color-muted: var(--muted-text);
 }
 
+.dark {
+  /* Dark mode colors */
+  --background: #0F0F0F; /* Darker background */
+  --foreground: #F8F9FA; /* Off-White text */
+  --accent: #9CA3AF; /* Lighter gray for better contrast */
+  --secondary: #F8F9FA; /* Light text in dark mode */
+  --card-background: #1F1F1F;
+  --border-color: #374151;
+  --muted-text: #9CA3AF;
+  --scrollbar-track: #1f2937;
+  --scrollbar-thumb: #4b5563;
+  --scrollbar-thumb-hover: rgb(236, 156, 36);
+  --dropdown-bg: #1F1F1F;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Fallback for system preference */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1E1E1E; /* Dark Charcoal for dark mode */
-    --foreground: #F8F9FA; /* Off-White text in dark mode */
+  html:not(.light) {
+    --background: #0F0F0F;
+    --foreground: #F8F9FA;
+    --accent: #9CA3AF;
+    --secondary: #F8F9FA;
+    --card-background: #1F1F1F;
+    --border-color: #374151;
+    --muted-text: #9CA3AF;
+    --scrollbar-track: #1f2937;
+    --scrollbar-thumb: #4b5563;
+    --scrollbar-thumb-hover: rgb(236, 156, 36);
+    --dropdown-bg: #1F1F1F;
+    --shadow-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -41,14 +80,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
+  background: var(--scrollbar-thumb);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--color_41));
+  background: var(--scrollbar-thumb-hover);
 }

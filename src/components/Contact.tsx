@@ -33,7 +33,7 @@ export default function Contact() {
           <p className="text-4xl font-bold tracking-tight text-background mb-6">
             Ready to Build Your Vision?
           </p>
-          <p className="text-xl leading-relaxed text-accent-200 max-w-3xl mx-auto">
+          <p className="text-xl leading-relaxed tracking-tight text-background max-w-3xl mx-auto">
             Contact our expert team today to discuss your next project.
           </p>
         </div>
@@ -41,20 +41,20 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold leading-7 text-white mb-8">Contact Information</h3>
+            <h3 className="text-lg font-semibold leading-7 tracking-tight text-background mb-8">Contact Information</h3>
             <dl className="space-y-6">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <MapPinIcon className="h-7 w-6 text-primary" aria-hidden="true" />
                 </dt>
-                <dd className="text-sm leading-6 text-gray-200">
+                <dd className="text-sm leading-6 text-gray-200 dark:text-black">
                   <div className="mb-2">
-                    <strong>Office 1:</strong><br />
+                    <strong className="text-white dark:text-background">Office 1:</strong><br />
                     Plot 1, Banana Avenue, Dansoman-Akukofoto<br />
                     Accra, Ghana
                   </div>
                   <div>
-                    <strong>Office 2:</strong><br />
+                    <strong className="text-white dark:text-background">Office 2:</strong><br />
                     House No: 20, 24th Street, New Achimota<br />
                     Accra, Ghana
                   </div>
@@ -64,7 +64,7 @@ export default function Contact() {
                 <dt className="flex-none">
                   <EnvelopeIcon className="h-7 w-6 text-primary" aria-hidden="true" />
                 </dt>
-                <dd className="text-sm leading-6 text-gray-200">
+                <dd className="text-sm leading-6 text-gray-200 dark:text-background">
                   <a href="mailto:info@npuntu.com" className="hover:text-primary transition-colors">
                     info@npuntu.com
                   </a>
@@ -74,7 +74,7 @@ export default function Contact() {
                 <dt className="flex-none">
                   <PhoneIcon className="h-7 w-6 text-primary" aria-hidden="true" />
                 </dt>
-                <dd className="text-sm leading-6 text-gray-200">
+                <dd className="text-sm leading-6 text-gray-200 dark:text-background">
                   <div className="mb-1">
                     <a href="tel:+233557275028" className="hover:text-primary transition-colors">
                       +233 (0) 557 275 028
@@ -89,19 +89,19 @@ export default function Contact() {
               </div>
             </dl>
 
-            <div className="mt-10 p-6 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl shadow-lg">
-              <h4 className="text-base font-semibold text-secondary mb-2">Company Registration</h4>
-              <p className="text-sm text-accent-700">
-                Registered in Ghana: <span className="font-medium">BN021262018</span>
+            <div className="mt-10 p-6 bg-white dark:bg-gray-800 border border-primary/30 dark:border-primary/50 rounded-xl shadow-lg">
+              <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Company Registration</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Registered in Ghana: <span className="font-medium text-primary">BN021262018</span>
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-background p-8 rounded-2xl shadow-lg">
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 p-8 rounded-2xl shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold leading-6 text-secondary">
+                <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white">
                   Full Name
                 </label>
                 <div className="mt-2.5">
@@ -112,12 +112,12 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="block w-full rounded-lg border-0 px-3.5 py-2.5 text-secondary shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-all"
+                    className="block w-full rounded-lg border-0 px-3.5 py-2.5 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-all"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-secondary">
+                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white">
                   Email
                 </label>
                 <div className="mt-2.5">
@@ -128,12 +128,12 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="block w-full rounded-lg border-0 px-3.5 py-2.5 text-secondary shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-all"
+                    className="block w-full rounded-lg border-0 px-3.5 py-2.5 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-all"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-secondary">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white">
                   Message
                 </label>
                 <div className="mt-2.5">
@@ -144,7 +144,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="block w-full rounded-lg border-0 px-3.5 py-2.5 text-secondary shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-all"
+                    className="block w-full rounded-lg border-0 px-3.5 py-2.5 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 transition-all"
                   />
                 </div>
               </div>

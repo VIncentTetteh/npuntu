@@ -11,16 +11,16 @@ const stats = [
 ]
 
 const backgroundImages = [
+  // {
+  //   url: '/images/services/11062b_4ac00df9268b4765b18eb82eee22432f~mv2.avif',
+  //   alt: 'Professional construction and engineering services'
+  // },
+  // {
+  //   url: '/images/services/3b23e7970432450492e5d304d7a29374.avif',
+  //   alt: 'Infrastructure development and civil engineering'
+  // },
   {
-    url: '/images/services/11062b_4ac00df9268b4765b18eb82eee22432f~mv2.avif',
-    alt: 'Professional construction and engineering services'
-  },
-  {
-    url: '/images/services/3b23e7970432450492e5d304d7a29374.avif',
-    alt: 'Infrastructure development and civil engineering'
-  },
-  {
-    url: '/images/services/3c6e7f_7e5c67d612524dcab8408712d523f1bd~mv2.avif',
+    url: '/images/services/SeaDefence.webp',
     alt: 'Road construction and maintenance projects'
   },
   {
@@ -64,7 +64,7 @@ export default function Hero() {
           />
         ))}
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/70 to-secondary/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/70 to-secondary/80 dark:from-background/10 dark:via-background/20 dark:to-background/50" />
       </div>
 
       
@@ -90,7 +90,7 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl py-20 sm:py-28 lg:py-36">
             <div className="text-center">
-              <h1 className="text-5xl font-bold tracking-tight text-background sm:text-6xl lg:text-7xl mb-8">
+              <h1 className="text-5xl font-bold tracking-tight text-background sm:text-6xl lg:text-7xl mb-8 dark:text-gray-300">
                 Building Ghana&apos;s
                 <span className="block text-primary bg-gradient-to-r from-primary to-primary-400 bg-clip-text text-transparent">Future</span>
               </h1>
@@ -106,7 +106,7 @@ export default function Hero() {
                 </a>
                 <a 
                   href="#contact" 
-                  className="text-lg font-semibold leading-6 text-background flex items-center gap-2 hover:text-primary transition-all duration-300 group"
+                  className="text-lg font-semibold leading-6 text-background flex items-center gap-2 hover:text-primary transition-all duration-300 group dark:text-white"
                 >
                   Get Started <ArrowRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
@@ -123,10 +123,10 @@ export default function Hero() {
                     aria-label="Scroll down to see more content"
                   >
                     <div className="relative flex flex-col justify-center items-center w-fit">
-                      <div className="text-white/80 text-sm font-medium group-hover:text-white transition-colors duration-300"> Scroll Down </div>
+                      <div className="text-white/80 text-sm font-medium group-hover:text-white transition-colors duration-300 dark:text-white"> Scroll Down </div>
                       <div className="absolute flex top-10">
-                        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white/80 group-hover:text-white transition-all duration-300 animate-bounce" />
-                        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white/40 absolute top-2 left-0 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.1s' }} />
+                        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white/80 group-hover:text-white transition-all duration-300 animate-bounce dark:text-primary" />
+                        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white/40 absolute top-2 left-0 transition-all duration-300 animate-bounce dark:text-primary" style={{ animationDelay: '0.1s' }} />
                     </div>
                     </div>
                   </button>

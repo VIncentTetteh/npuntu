@@ -63,21 +63,21 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 sm:py-24 bg-accent-50">
+    <section id="services" className="py-20 sm:py-24 bg-card">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-primary mb-4">OUR SERVICES</h2>
           <p className="text-4xl font-bold tracking-tight text-secondary mb-6">
             Construction & Engineering Solutions
           </p>
-          <p className="text-xl leading-relaxed text-accent-600 max-w-3xl mx-auto">
+          <p className="text-xl leading-relaxed text-muted max-w-3xl mx-auto">
             End-to-end solutions that meet the diverse needs of our clients across Ghana and beyond.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.slice(0, 6).map((service) => (
-            <div key={service.name} className="bg-background p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer">
+            <div key={service.name} className="bg-background border border-border p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer">
               <div className="flex items-center gap-x-4 mb-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary group-hover:bg-primary-600 group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <service.icon className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
@@ -86,7 +86,7 @@ export default function Services() {
                   {service.name}
                 </h3>
               </div>
-              <p className="text-accent-600 leading-relaxed mb-4">
+              <p className="text-muted leading-relaxed mb-4">
                 {service.description}
               </p>
               <Link

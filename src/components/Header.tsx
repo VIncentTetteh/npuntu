@@ -72,7 +72,7 @@ export default function Header() {
                   </button>
                   {servicesOpen && (
                     <div className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-                      <div className="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-background text-sm leading-6 shadow-xl">
+                      <div className="w-screen max-w-md flex-auto overflow-hidden rounded-2xl bg-card text-sm leading-6 shadow-xl border border-border bg-gray-50 dark:bg-gray-800">
                         <div className="p-4">
                           {item.subItems.map((subItem) => (
                             <div key={subItem.name} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-primary-50 transition-colors duration-200">
