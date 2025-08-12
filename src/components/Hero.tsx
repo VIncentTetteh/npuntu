@@ -67,27 +67,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/70 to-secondary/80" />
       </div>
 
-      {/* Animated Scroll Down Arrow */}
-      <div className="absolute bottom-80 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-        <button
-          onClick={() => {
-            const nextSection = document.getElementById('about') || document.querySelector('section:not(#home)');
-            if (nextSection) {
-              nextSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-          className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110"
-          aria-label="Scroll down to see more content"
-        >
-          <div className="text-white/80 text-sm font-medium group-hover:text-white transition-colors duration-300">
-            Scroll Down
-          </div>
-          <div className="relative">
-            <ChevronDownIcon className="h-8 w-8 text-white/80 group-hover:text-white transition-all duration-300 animate-bounce" />
-            <ChevronDownIcon className="h-8 w-8 text-white/40 absolute top-2 left-0 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.1s' }} />
-          </div>
-        </button>
-      </div>
+      
 
       {/* Slideshow Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
@@ -131,6 +111,30 @@ export default function Hero() {
                   Get Started <ArrowRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
+              {/* Animated Scroll Down Arrow */}
+                {/* <div className="flex items-center justify-center w-full left-1/2 bottom-32 sm:bottom-40 md:bottom-48 lg:bottom-56 transform -translate-x-1/2 z-20 flex flex-col items-center w-full max-h-[10vh] sm:max-h-[8vh] md:max-h-[6vh]"> */}
+                <div className=" m-auto w-fit mt-16 transform -translate-x-1/2 z-20">
+                  <button
+                    onClick={() => {
+                  const nextSection = document.getElementById('about') || document.querySelector('section:not(#home)');
+                  if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                    }}
+                    className="group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110 w-full"
+                    aria-label="Scroll down to see more content"
+                  >
+                    <div className="text-white/80 text-sm font-medium group-hover:text-white transition-colors duration-300">
+                  Scroll Down
+                    </div>
+                    <div className="absolute top-10">
+                      <div className="relative flex justify-center">
+                        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white/80 group-hover:text-white transition-all duration-300 animate-bounce" />
+                        <ChevronDownIcon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white/40 absolute top-2 left-0 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.1s' }} />
+                    </div>
+                    </div>
+                  </button>
+                </div>
             </div>
           </div>
         </div>
