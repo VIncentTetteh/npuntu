@@ -97,7 +97,7 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold leading-6 text-foreground">Contact Info</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   <li className="text-sm leading-6 text-muted">
-                    info@npuntu.com
+                    info@npuntu.build
                   </li>
                   <li className="text-sm leading-6 text-muted">
                     +233 (0) 557 275 028
