@@ -65,8 +65,8 @@ export default function Contact() {
                   <EnvelopeIcon className="h-7 w-6 text-primary" aria-hidden="true" />
                 </dt>
                 <dd className="text-sm leading-6 text-gray-200 dark:text-background">
-                  <a href="mailto:info@npuntu.com" className="hover:text-primary transition-colors">
-                    info@npuntu.com
+                  <a href="mailto:info@npuntu.build" className="hover:text-primary transition-colors">
+                    info@npuntu.build
                   </a>
                 </dd>
               </div>

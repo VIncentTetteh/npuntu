@@ -76,7 +76,7 @@ src/
 ## Contact Information
 
 **Npuntu Companies Ltd**
-- Email: info@npuntu.com
+- Email: info@npuntu.build
 - Phone: +233 (0) 557 275 028 / +233 (0) 503 706 700
 - Address: Plot 1, Banana Avenue, Dansoman-Akukofoto, Accra, Ghana
 - Registration: BN021262018
